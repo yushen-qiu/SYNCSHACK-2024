@@ -1,21 +1,25 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes, useNavigate, BrowserRouter } from 'react-router-dom';
-import LandingPage from './pages/LandingPage';
+import logo from './logo.svg';
+import './App.css';
+import Lobby from "./pages/Lobby";
+import Landing from "./pages/Landing";
+import { Routes, Route } from "react-router-dom";
 
+// function App() {
+//   return (
+//     <div className="">
+//       <header className="bg-slate-400">
+//         <p className='text-red-500'>Test</p>
+//       </header>
+//     </div>
+//   );
+// }
 
 function App() {
-  return (
-    <div>
-      <BrowserRouter>
-        <Routes>
-          <Route index element={<LandingPage />}   />
-          <Route path="/home" element={<LandingPage />}   />
-
-        </Routes>
-      </BrowserRouter>
-
-    </div>
-
+  return React.createElement(
+    'div',
+    null,
+    React.createElement(Landing, null)
   );
 }
 
