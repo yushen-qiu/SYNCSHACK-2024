@@ -6,15 +6,6 @@ import Landing from "./pages/Landing";
 import Game from "./pages/Game";
 import { Router, Routes, Route } from "react-router-dom";
 
-// function App() {
-//   return (
-//     <div className="">
-//       <header className="bg-slate-400">
-//         <p className='text-red-500'>Test</p>
-//       </header>
-//     </div>
-//   );
-// }
 
 function App() {
   return React.createElement(
