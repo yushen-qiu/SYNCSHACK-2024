@@ -8,6 +8,8 @@ import { BrowserRouter } from 'react-router-dom';
 import { Routes, Route } from "react-router-dom";
 import Lobby from './pages/Lobby'
 
+import Game from './pages/Game'
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
@@ -15,6 +17,7 @@ root.render(
       <Routes>
         <Route path="/" element={<App />} />
         <Route path="lobby" element={<Lobby />}></Route>
+        <Route path="game" element={<Game />}></Route>
       </Routes>
     </BrowserRouter>
   </React.StrictMode>
