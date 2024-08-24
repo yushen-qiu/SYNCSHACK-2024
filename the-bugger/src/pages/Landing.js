@@ -31,7 +31,9 @@ function Landing() {
       ),
       React.createElement(
         'button',
-        { className: 'mt-8 w-80 bg-[#d8b494] text-white px-4 py-2 rounded-full' },
+        { className: 'mt-8 w-80 bg-[#d8b494] text-white px-4 py-2 rounded-full',
+        onClick: handleJoinClick  
+        },
         'Create your own room'
       )
     )
