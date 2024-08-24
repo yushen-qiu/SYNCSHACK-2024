@@ -15,11 +15,22 @@ Including another URLconf
 """
 
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
 from . import views
+from chat import views as chat_views
+from django.contrib.auth.views import LoginView, LogoutView
+
 
 urlpatterns = [
     path("admin/", admin.site.urls),
+    # route you toward views.
+    path("", include("chat.urls")),
     path("", views.homepage),
-    path("test", views.test)
+    path("test", views.test),
+    
+    # path("", chat_views.chatPage, name="chat-page"),
+    # login-section
+    # path("auth/login/", LoginView.as_view
+    #      (template_name="chat/LoginPage.html"), name="login-user"),
+    # path("auth/logout/", LogoutView.as_view(), name="logout-user"),
 ]
