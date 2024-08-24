@@ -1,0 +1,3 @@
+[submodule "alfa-leetcode-api"]
+	path = alfa-leetcode-api
+	url = https://github.com/alfaarghya/alfa-leetcode-api.git
