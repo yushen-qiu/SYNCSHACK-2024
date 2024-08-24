@@ -25,7 +25,7 @@ urlpatterns = [
     path("admin/", admin.site.urls),
     # route you toward views.
     path("", include("chat.urls")),
-    path("", views.homepage),
+    # path("", views.homepage),
     path("test", views.test),
     
     # path("", chat_views.chatPage, name="chat-page"),

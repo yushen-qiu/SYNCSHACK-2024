@@ -9,6 +9,7 @@ from chat import views as chat_views
 from django.contrib.auth.views import LoginView, LogoutView
 
 
+# this file is to determine which view function or class should handle that request.
 urlpatterns = [
     path("", chat_views.chatPage, name="chat-page"),
 ]
