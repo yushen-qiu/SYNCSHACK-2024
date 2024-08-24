@@ -1,10 +1,10 @@
 import React from 'react';
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
-import Lobby from "./pages/Lobby";
+// import Lobby from "./pages/Lobby";
 import Landing from "./pages/Landing";
-import { Routes, Route, Router } from "react-router-dom";
-
+import Game from "./pages/Game";
+import { Router, Routes, Route } from "react-router-dom";
 
 function App() {
   return React.createElement(

@@ -7,35 +7,22 @@ import reportWebVitals from './reportWebVitals';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Lobby from './pages/Lobby'
 
-// const root = ReactDOM.createRoot(document.getElementById('root'));
-// root.render(
-//   <React.StrictMode>
-//     <BrowserRouter>
-//       <Routes>
-//         <Route path="/" element={<App />} />
-//         <Route path="lobby" element={<Lobby />}></Route>
-//       </Routes>
-//     </BrowserRouter>
-//   </React.StrictMode>
-// );
+
+import Game from './pages/Game'
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(
-  React.createElement(
-    React.StrictMode,
-    null,
-    React.createElement(
-      BrowserRouter,
-      null,
-      React.createElement(
-        Routes,
-        null,
-        React.createElement(Route, { path: "/", element: React.createElement(App, null) }),
-        React.createElement(Route, { path: "/lobby", element: React.createElement(Lobby, null) }) // Ensure Lobby is imported
-      )
-    )
-  )
+  <React.StrictMode>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<App />} />
+        <Route path="lobby" element={<Lobby />}></Route>
+        <Route path="game" element={<Game />}></Route>
+      </Routes>
+    </BrowserRouter>
+  </React.StrictMode>
 );
 
 
