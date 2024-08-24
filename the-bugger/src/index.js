@@ -7,7 +7,9 @@ import reportWebVitals from './reportWebVitals';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Lobby from './pages/Lobby'
 
+
 import Game from './pages/Game'
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
