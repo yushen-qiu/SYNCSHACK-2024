@@ -1,28 +1,44 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
+function Landing() {
+  const navigate = useNavigate();
 
-const LandingPage = () => {
-  return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100">
-      <header className="w-full py-4 bg-blue-500 text-white text-center">
-        <button className="bg-white text-blue-500 px-4 py-2 rounded-md hover:bg-blue-100">Log in</button>
-      </header>
-      <main className="flex flex-col items-center mt-10">
-        <h1 className="text-4xl font-bold mb-6">The Bugger</h1>
-        <div className="flex flex-col items-center space-y-4">
-          <input
-            type="text"
-            placeholder="Code"
-            className="px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-          />
-          <button className="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600">Join</button>
-        </div>
-        <button className="mt-6 bg-green-500 text-white px-6 py-3 rounded-md hover:bg-green-600">
-          Create your own room
-        </button>
-      </main>
-    </div>
+  // upon clicking join 
+  const handleJoinClick = () => {
+    navigate('/lobby'); 
+  };
+
+  return React.createElement(
+    'div',
+    { className: 'flex flex-col items-center justify-center min-h-screen bg-[#faf4ef]' },
+    React.createElement(
+      'main',
+      { className: 'flex flex-col items-center mt-6' },
+      React.createElement('h1', { className: 'text-8xl font-semibold mb-16 text-[#5f5f5f]' }, 'The Bugger'),
+      React.createElement(
+        'div',
+        { className: 'w-full flex justify-center items-center space-x-4' },
+        React.createElement('input', {
+          type: 'text',
+          placeholder: 'Code',
+          className: 'px-4 py-2 border-none rounded-full bg-[#a16667] text-white text-center placeholder-white placeholder-opacity-50 focus:outline-none'
+        }),
+        React.createElement('button', {
+          className: 'w-24 bg-[#d8b494] text-white px-4 py-2 rounded-full',
+          onClick: handleJoinClick  
+        }, 'Join')
+      ),
+      React.createElement(
+        'button',
+        { className: 'mt-8 w-80 bg-[#d8b494] text-white px-4 py-2 rounded-full',
+        onClick: handleJoinClick  
+        },
+        'Create your own room'
+      )
+    )
   );
-};
+}
 
-export default LandingPage;
+
+export default Landing;
